@@ -1,0 +1,75 @@
+## **4. Fixed-effect Model**
+###
+The fixed-effect model assumes "that there is one true effect size that underlies all the studies in the analysis, and that differences in observed effects are due to sampling error'' (Borenstein et al., 2010).  
+
+$$\hat{\theta}_{FE}=\frac{\displaystyle\sum_{i=1}^{k}w_{i}\hat{\theta}_{i}}{\displaystyle\sum_{i=1}^{k}w_{i}}$$
+where $w_{k}=1/\hat{\sigma}_{k}^{2}$. The approximated standard error for $\hat{\theta}_{FE}$ is
+$$S.E.(\hat{\theta}_{FE})=\sqrt{\frac{1}{\displaystyle\sum_{i=1}^{k}w_{i}}}$$
+
+###
+#### **Model fitting**
+**Exercise**  
+Please try to fit a fixed-effect model for the following studies using the `rma()` function from the *metafor* package.
+
+```{r, rma-fe-exercise-setup}
+DF <- dat.ishak2007
+```
+```{r, rma-fe-exercise, exercise = TRUE}
+fit <- rma(yi = , vi = , measure = , data = , slab = , method = )
+```
+```{r, rma-fe-exercise-hint-1}
+fit <- rma(yi = yi, ...)
+```
+```{r, rma-fe-exercise-hint-2}
+fit <- rma(yi = yi, vi = vi, ...)
+```
+```{r, rma-fe-exercise-hint-3}
+fit <- rma(yi = yi, vi = vi, measure = "OR", ...)
+```
+```{r, rma-fe-exercise-hint-4}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, ...)
+```
+```{r, rma-fe-exercise-hint-5}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, ...)
+```
+```{r, rma-fe-exercise-solution}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "FE")
+```
+
+```{r, rma-fe-exercise-summary-setup}
+DF <- dat.ishak2007
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "FE")
+```
+```{r, rma-fe-exercise-summary, exercise = TRUE}
+summary(object = )
+```
+```{r, rma-fe-exercise-summary-solution}
+summary(object = fit)
+```
+
+###
+#### **Forest Plot**
+```{r, rma-fe-exercise-forest-plot-setup}
+
+```
+
+```{r, rma-fe-exercise-forest-plot, exercise = TRUE, fig.height=10, fig.width=6}
+forest(x = , atransf = )
+```
+
+```{r, rma-fe-exercise-forest-plot-hint-1}
+forest(x = fit, ...)
+```
+
+```{r, rma-fe-exercise-forest-plot-hint-2}
+forest(x = fit, showweights = TRUE, ...)
+```
+
+```{r, rma-fe-exercise-forest-plot-solution}
+forest(x = fit, showweights = TRUE, atransf = exp)
+```
+
+### **References**  
+Borenstein M, Hedges LV, Higgins JPT & Rothstein HR (2010). A basic introduction to fixed-effect and random-effects models for meta-analysis. *Res Synth Methods*, 1: 97-111.  
+
+Viechtbauer W (2010). Conducting meta-analyses in R with the metafor package. *J Stat Softw*, 36: 1-48.

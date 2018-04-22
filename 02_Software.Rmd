@@ -1,0 +1,136 @@
+## **2. Software**
+### 
+R is a popular open-source project which provides a free software package for statistical computing using an object oriented programming language called S. Many classical and modern statistical techniques have been implemented in R by its fast growing community since its first release in 1993. The elegance of R in giving minimal output, storing results from expressions in objects for subsequent interrogation by further R functions, and producing high-quality graphics makes it a great tool for meta-analysis.
+
+### **2.1 Installation**
+Precompiled binary distributions of R for Linux, macOS and Windows are available on [CRAN](https://cran.r-project.org). For macOS or Windows operation systems, please download and execute the latest PKG- or EXE-file of the precompiled binary distribution from your CRAN mirror of choice. For Linux operation systems, please follow the instructions on your CRAN mirror of choice to install the latest precompiled binary distribution.
+
+### **2.2 Introduction to R**
+#### **Commands**
+R is a case sensitive expression language. Elementary commands consist of either expressions or assignments. Commands are separated either by a semicolon (`;`) or by a new line. The entities R operates on are technically known as objects.  
+
+An expression is evaluated and subsequently printed. However, in contrast to an assignment the result from an expression is lost. The following expression sums a simple sequence from 1 to 5 (1 + 2 + 3 + 4 + 5 = 15).  
+```{r, echo=TRUE, eval=TRUE}
+sum(x = 1:5)
+```
+
+An assignment also evaluates an expression and passes its result through the assignment operator (`<-`) to an object (here to an object called `a`). Accordingly, the result is not lost but it is not automatically printed.
+```{r, echo=TRUE, eval=TRUE}
+a <- sum(x = 1:5); a
+```
+
+```{r, echo=TRUE, eval=TRUE}
+b <- a / 3; b
+```
+###
+#### **Help**
+R has an inbuilt help facility to get more information on any named function. The following expression shows the documentation of the `sum()` function.
+
+```{r, help, echo=TRUE, eval=FALSE}
+help(topic = sum)
+```
+
+**Exercise**  
+Please try to get more information on the function called `read.csv2()` using the `help()` function.
+```{r, help-exercise, exercise=TRUE}
+help(topic = )
+```
+```{r, help-exercise-solution}
+help(topic = read.csv2)
+```
+
+###
+```{r, help-exercise-quiz}
+quiz(
+  question(text = "What does the `read.csv2()` function according to its description?",
+    answer("Parses a file in table format into the global R environment", correct = TRUE),
+    answer("Prints an object from the global R environment to a local file", correct = FALSE),
+    answer("Reloads a saved data set into the global R environment", correct = FALSE),
+    answer("Loads a specific data set into the global R environment", correct = FALSE),
+    answer("Attaches a data set to the R search path", correct = FALSE),
+    random_answer_order = TRUE,
+    allow_retry = TRUE
+  ),
+  question(text = "What is the difference between the `read.csv()` and `read.csv2()` functions according to their default arguments?",
+    answer("`sep = \",\"` and `dec = \".\"` versus `sep = \";\"` and `dec = \",\"`", correct = TRUE),
+    answer("`header = TRUE` and `dec = \".\"` versus `header = FALSE` and `dec = \",\"`", correct = FALSE),
+    answer("`header = FALSE` and `sep = \",\"` versus `header = TRUE` and `sep = \";\"`", correct = FALSE),
+    answer("`dec = \".\"` and `fill = TRUE` versus `dec = \",\"` and `fill = FALSE`", correct = FALSE),
+    answer("`sep = \";\"` and `dec = \".\"` versus `sep = \"\\t\"` and `dec = \",\"`", correct = FALSE),
+    random_answer_order = TRUE,
+    allow_retry = TRUE
+  ),
+  caption = ""
+)
+```
+
+###
+#### **Packages**
+All R functions are stored in *packages*. Additional packages can be installed from the Comprehensive R Archive Network using the `install.packages()` function. For the purpose of this course, the *bayesmeta* and *metafor* packages are required. The following expression installs the *bayesmeta* package.
+
+```{r, install-packages, echo=TRUE, eval=FALSE}
+install.packages(pkgs = "bayesmeta")
+```  
+  
+**Exercise**  
+Please try to install the *metafor* package using the `install.packages()` function.
+```{r, install-packages-exercise, exercise = TRUE}
+install.packages(pkgs = )
+```
+```{r, install-packages-exercise-solution}
+install.packages(pkgs = "metafor")
+```
+
+Functions from an additional package (e.g. the `escalc()` function for effect estimation from the *metafor* package) are only available when the corresponding package is loaded. The following expression loads the *bayesmeta* package.
+```{r, library, echo=TRUE, eval=FALSE}
+library(package = "bayesmeta")
+```
+
+**Exercise**  
+Please try to load the *metafor* package using the `library()` function.
+```{r, library-exercise, exercise = TRUE}
+library(package = )
+```
+```{r, library-exercise-solution}
+library(package = "metafor")
+```
+
+###
+#### **Working Directory**
+The filepath of the working directory of the R process can be set using the `setwd()` function.
+```{r, setwd, echo=TRUE, eval=FALSE}
+setwd(dir = "/myUserName/myFilePath/")
+```
+
+###
+#### **Data Input**
+Data can be read from the current working directory using the `read` functions family. The following assignment reads a file in table format (here a CSV-file) into the global R environment, creates a data structure called \"data frame\" from it and passes the data to an object called `DF`.
+```{r, read-csv2, echo=TRUE, eval=FALSE}
+DF <- read.csv2(file = "myData.csv")
+```
+
+**Exercise**  
+Please try to read the CSV-file (\"myData.csv\") into the global R environment and pass it to an object called `DF`.
+```{r, read-csv2-exercise-setup}
+write.csv2(x = data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+, file = "myData.csv", row.names = FALSE)
+```
+```{r, read-csv2-exercise, exercise = TRUE}
+DF <- read.csv2(file = ); DF
+```
+```{r, read-csv2-exercise-solution}
+DF <- read.csv2(file = "myData.csv"); DF
+```
+
+Columns from a data frame can be extracted using the `$` operator.
+```{r, echo=FALSE, eval=TRUE}
+DF <- data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+```{r, echo=TRUE, eval=TRUE}
+DF$Study
+```
+
+### **References**
+R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.r-project.org/.  
+
+Venables W. N., Smith D. M. & the R Core Team (2017). An introduction to R. Notes on R: A programming environment for data analysis and graphics. https://cran.r-project.org/doc/manuals/R-intro.pdf.  

@@ -1,0 +1,37 @@
+## **Quick Tour**
+The following code chunk shows all commands required for fitting a fixed-effect and/or random-effects model. Please note that this example illustrates effect estimation and model fitting for a categorical outcome measure (here odds ratio). However, the same functions allow effect estimation and model fitting for a continuous outcome measure (e.g. mean difference).
+
+```{r, echo=TRUE, eval=FALSE}
+# Install the metafor package
+install.packages(pkgs = "metafor")
+
+# Load the metafor package
+library(package = "metafor")
+
+# Set the working directory
+setwd(dir = "/myUserName/myFilePath/")
+
+# Read a CSV-file into the global R environment
+DF <- read.csv2(file = "myData.csv"); DF
+
+# Optional: Estimate the effect measure for all included studies
+DF <- escalc(measure = "OR", ai = ai, bi = bi, ci = ci, di = di, data = DF); DF
+
+# Fit a fixed effect model
+fe.fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "FE")
+
+# Extract model parameters from the estimated fixed effect model
+summary(object = fe.fit)
+
+# Create a forest plot from the estimated fixed effect model
+forest(x = fe.fit, showweights = TRUE, atransf = exp)
+
+# Fit a random effects model
+re.fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", test = "knha")
+
+# Extract model parameters from the estimated random effects model
+summary(object = re.fit)
+
+# Create a forest plot from the estimated random effects model
+forest(x = re.fit, showweights = TRUE, atransf = exp)
+```

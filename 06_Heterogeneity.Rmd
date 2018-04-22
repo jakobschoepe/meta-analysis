@@ -1,0 +1,42 @@
+## **6. Heterogeneity**
+In meta-analysis, statistical heterogeneity is defined as the variation among the effect estimates of individual studies beyond that expected from chance alone. 
+
+###
+#### **Measures of Heterogeneity**
+Cochran's Q (Cochran, 1954) is
+$$Q=\displaystyle\sum_{k=1}^{i}w_{k}(\hat{\theta}_{k}-\frac{\displaystyle\sum_{k=1}^{i}w_{k}\hat{\theta}_{k}}{\displaystyle\sum_{k=1}^{i}w_{k}})^{2}$$
+
+Higgins' and Thompson's $I^2$ (Higgins & Thompson, 2002) is
+$$I^2=\max\Bigg\{0,\frac{Q-(i-1)}{Q}\Bigg\}$$
+
+### **6.1 Subgroup Analysis**
+
+### **6.2 Meta Regression**
+
+
+### **References**
+Berlin J. A., Santanna J., Schmid C. H., Szczech L. A. & Feldman H. I. (2002). Individual patient- versus group-level data meta-regressions for the investigation of treatment effect modifiers: Ecological bias rears its ugly head. *Stat Med*, 21: 371-387.  
+
+Cochran W. G. (1954). The combination of estimates from different experiments. *Biometrics*, 10: 101-129.
+
+Engels E. A., Schmid C. H., Terrin N., Olkin I. & Lau J. (2000). Heterogeneity and statistical significance in meta-analysis: An empirical study of 125 meta-analyses. *Stat Med*, 19: 1707-1728.  
+
+Hardy R. J. & Thompson S. G. (1998). Detecting and describing heterogeneity in meta-analysis. *Stat Med*, 17: 841-856.  
+
+Higgins J. P. T. & Thompson S. G. (2002). Quantifying heterogeneity in a meta-analysis. *Stat Med*, 21: 1539-1558.  
+
+Knapp G., Biggerstaff B. J. & Hartung J. (2006). Assessing the amount of heterogeneity in random-effects meta-analysis. *Biom J*, 48: 271-285.  
+
+Lau J., Ioannidis J. P. A. & Schmid C. H. (1998). Summing up evidence: One answer is not always enough. *Lancet*, 351: 123-127.  
+
+Mittlböck M. & Heinzl H. (2006). A simulation study comparing properties of heterogeneity measures in meta-analyses. *Stat Med*, 25: 4321-4333.  
+
+Rücker G., Schwarzer G., Carpenter J. R. & Schumacher M. (2008). Undue reliance on $I^2$ in assessing heterogeneity may mislead. *BMC Med Res Methodol*, 8: 79.  
+
+Thompson S. G. (1994). Why sources of heterogeneity in meta-analysis should be investigated. *BMJ*, 309: 1351-1355.  
+
+Thompson S. G. & Sharp S. J. (1999). Explaining heterogeneity in meta-analysis: A comparison of methods. *Stat Med*, 18: 2693-2708.  
+
+Viechtbauer W. (2007). Confidence intervals for the amount of heterogeneity in meta-analysis. *Stat Med*, 26: 37-52.  
+
+Viechtbauer W. (2010). Conducting meta-analyses in R with the metafor package. *J Stat Softw*, 36: 1-48.

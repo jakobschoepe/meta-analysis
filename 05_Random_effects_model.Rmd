@@ -1,0 +1,89 @@
+## **5. Random-effects Model**
+###
+#### **Estimation of Between-Study Variance ($\tau^2$)**
+|Estimator||
+|:--|:--|
+|DerSimonian-Laird (DL)|
+|Paule-Mandel (PM)|
+|Restricted Maximum-Likelihood (REML)|
+|Maximum-Likelihood (ML)|
+|Hunter-Schmidt (HS)|
+|Sidik-Jonkman (SJ)|
+|Hedges (HE)|
+|Empirical Bayes (EB)|
+|Generalized Q-statistic (GENQ)|
+
+**Recommendation**  
+
+
+###
+#### **Hartung-Knapp Adjustment**
+
+```{r, rma-re-exercise-setup}
+
+```
+```{r, rma-re-exercise, exercise = TRUE}
+fit <- rma(yi = , sei = , measure = , data = , slab = , method = , test = )
+```
+```{r, rma-re-exercise-hint-1}
+fit <- rma(yi = yi, ...)
+```
+```{r, rma-re-exercise-hint-2}
+fit <- rma(yi = yi, vi = vi, ...)
+```
+```{r, rma-re-exercise-hint-3}
+fit <- rma(yi = yi, vi = vi, measure = "OR", ...)
+```
+```{r, rma-re-exercise-hint-4}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, ...)
+```
+```{r, rma-re-exercise-hint-5}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, ...)
+```
+```{r, rma-re-exercise-hint-6}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", ...)
+```
+```{r, rma-re-exercise-solution}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", test = "knha")
+```
+
+```{r, rma-re-exercise-summary-setup}
+
+```
+```{r, rma-re-exercise-summary, exercise = TRUE}
+summary(object = )
+```
+```{r, rma-re-exercise-summary-solution}
+summary(object = fit)
+```
+
+```{r, rma-re-exercise-forest-plot-setup}
+
+```
+```{r, rma-re-exercise-forest-plot, exercise = TRUE, fig.height=10, fig.width=6}
+forest(x = , showweights = , atransf = )
+```
+```{r, rma-re-exercise-forest-plot-hint-1}
+forest(x = fit, ...)
+```
+```{r, rma-re-exercise-forest-plot-hint-2}
+forest(x = fit, showweights = TRUE, ...)
+```
+```{r, rma-re-exercise-forest-plot-solution}
+forest(x = fit, showweights = TRUE, atransf = exp)
+```
+
+### **References**  
+DerSimonian R & Laird N (1986). Meta-analysis in clinical trials. *Controlled Clinical Trials*, 7: 177-188.  
+
+Hardy RJ & Thompson SG (1996). A likelihood approach to meta-analysis with random effects. *Stat Med*, 15: 619-629.  
+
+Hartung J & Knapp G (2001). On tests of the overall treatment effect in meta-analysis with normally distributed responses. *Stat Med*, 20: 1771-1782.  
+
+Hartung J & Knapp G (2001). A refined method for the meta-analysis of controlled clinical trials with binary outcome. *Stat Med*, 20: 3875-3889.  
+
+Hunter JE & Schmidt FL (2004). Methods of meta-analysis: Correcting error and bias in research findings. Thousand Oaks, Calif.  
+
+Paule RC & Mandel J (1982). Consensus values and weighting factors.   
+
+Veroniki AA, Jackson D, Viechtbauer W, Bender R, Bowden J, Knapp G, Kuss O, Higgins JPT, Langan D & Salanti G (2016). Methods to estimate the between-study variance and its uncertainty in meta-analysis. *Res Synth Methods*, 7: 55-79. 

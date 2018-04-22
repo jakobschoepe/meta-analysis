@@ -1,0 +1,42 @@
+---
+title: "Evidence Synthesis in Biomedical Research"
+output: 
+  learnr::tutorial:
+    theme: "cerulean"
+    progressive: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(metafor)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r child="00_Welcome.Rmd"}
+
+```
+```{r child="00_Quick_Tour.Rmd"}
+
+```
+```{r child="01_Relationale.Rmd"}
+
+```
+```{r child="02_Software.Rmd"}
+
+```
+```{r child="03_Effect_Measures.Rmd"}
+
+```
+```{r child="04_Fixed_effect_model.Rmd"}
+
+```
+```{r child="05_Random_effects_model.Rmd"}
+
+```
+```{r child="06_Heterogeneity.Rmd"}
+
+```
+```{r child="07_Publication_bias.Rmd"}
+
+```

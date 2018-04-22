@@ -1,0 +1,50 @@
+## **Welcome** {data-progressive=FALSE}
+Welcome to the interactive course "Introduction to Evidence Synthesis in Biomedical Research'' of the Institute for Medical Biometry, Epidemiology and Medical Informatics, Saarland University.
+
+#### **Frequently Asked Questions (FAQs)**  
+**What is the objective of the course?**  
+This interactive course aims to provide state-of-the-art information and recommendations concerning meta-analysis of aggregated data from conceptually similar studies in biomedical research.
+<br>
+
+**How long is the course?**  
+While individual timing may vary, this course takes on average approximately 2 hours.
+<br>
+
+**Are there any prerequisites for the course?**  
+The course assumes no prior knowledge of meta-analytic methods.
+<br>
+
+**Which software is required for the course?**  
+R (https://www.r-project.org) and R Studio (https://www.rstudio.com)
+
+#### **Content**
+1. Relationale  
+
+2. Software  
+  2.1 Installation  
+  2.2 Introduction to R  
+
+3. Effect Estimation  
+  3.1 Categorical Measures  
+  3.2 Continuous Measures  
+
+4. Fixed-effect Model  
+
+5. Random-effects Model  
+
+6. Heterogeneity  
+  6.1 Subgroup Analysis  
+  6.2 Meta-Regression  
+
+7. Publication Bias  
+  7.1 Funnel Plot  
+
+8. Bayesian Approach  
+  Coming soon.  
+
+9. Indirect Comparisons  
+  Coming soon.  
+
+#### **Contact**  
+Jakob Schöpe (jas@med-imbei.uni-saarland.de)  
+Prof. Stefan Wagenpfeil (sw@med-imbei.uni-saarland.de)

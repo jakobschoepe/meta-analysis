@@ -1,0 +1,375 @@
+## **3. Effect Estimation**
+### **3.1 Categorical Measures**
+
+||Outcome A|Outcome B|Total|
+|--:|:-:|:-:|:-:|
+**Group 1**|$a$|$b$|$n_{1}$|
+**Group 2**|$c$|$d$|$n_{2}$|
+
+#### **Arcsine Difference**
+For study $i$, the estimated arcsine difference is
+$$\widehat{ASD}_{i}=\arcsin\sqrt{\frac{a_{i}}{a_{i}+b_{i}}}-\arcsin\sqrt{\frac{c_{i}}{c_{i}+d_{i}}}$$
+where $\arcsin$ is the arcsine function, $a_{i}$ is the observed count in the upper left cell of the 2x2 table of study $i$ (`ai`), $b_{i}$ is the observed count in the upper right cell of the 2x2 table of study $i$ (`bi`), $c_{i}$ is the observed count in the lower left cell of the 2x2 table of study $i$ (`ci`), and $d_{i}$ is the observed count in the lower right cell of the 2x2 table of study $i$ (`di`).  
+
+The standard error of the estimated arcsine difference is approximated by 
+$$S.E.(\widehat{ASD}_{i})=\sqrt{\widehat{Var}(\widehat{ASD}_{i})}=\sqrt{\frac{1}{4(a_{i}+b_{i})}+\frac{1}{4(c_{i}+d_{i})}}$$
+**Example**  
+```{r, escalc-as-example, echo=TRUE, eval=TRUE}
+escalc(measure = "AS", ai = 110, bi = 310, ci = 120, di = 327)
+```
+
+Note that the `escalc()` function from the *metafor* package estimates the arcsine difference (`yi`) and its variance (`vi`).
+
+**Exercise**  
+Please try to compute the arcsine difference and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  
+
+```{r, echo=FALSE, eval=TRUE}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+
+```{r, escalc-as-exercise-setup}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+```{r, escalc-as-exercise, exercise=TRUE}
+escalc(measure = , ai = , bi = , ci = , di = , data = )
+```
+```{r, escalc-as-exercise-hint-1}
+escalc(measure = "AS", ...)
+```
+```{r, escalc-as-exercise-hint-2}
+escalc(measure = "AS", ai = ai, ...)
+```
+```{r, escalc-as-exercise-hint-3}
+escalc(measure = "AS", ai = ai, bi = bi, ...)
+```
+```{r, escalc-as-exercise-hint-4}
+escalc(measure = "AS", ai = ai, bi = bi, ci = ci, ...)
+```
+```{r, escalc-as-exercise-hint-5}
+escalc(measure = "AS", ai = ai, bi = bi, ci = ci, di = di, ...)
+```
+```{r, escalc-as-exercise-solution}
+escalc(measure = "AS", ai = ai, bi = bi, ci = ci, di = di, data = DF)
+```
+
+###
+#### **Odds Ratio**
+For study $i$, the estimated odds ratio is
+$$\widehat{OR}_{i}=\frac{a_{i}d_{i}}{b_{i}c_{i}}$$
+where $a_{i}$ is the observed count in the upper left cell of the 2x2 table of study $i$ (`ai`), $b_{i}$ is the observed count in the upper right cell of the 2x2 table of study $i$ (`bi`), $c_{i}$ is the observed count in the lower left cell of the 2x2 table of study $i$ (`ci`), and $d_{i}$ is the observed count in the lower right cell of the 2x2 table of study $i$ (`di`).  
+
+The standard error of the natural logarithm of the estimated odds ratio is approximated by  
+$$S.E.(\log(\widehat{OR}_{i}))=\sqrt{\widehat{Var}(\log(\widehat{OR}_{i}))}=\sqrt{\frac{1}{a_{i}}+\frac{1}{b_{i}}+\frac{1}{c_{i}}+\frac{1}{d_{i}}}.$$  
+  
+**Example**  
+```{r, escalc-or-example, echo=TRUE, eval=TRUE}
+escalc(measure = "OR", ai = 110, bi = 310, ci = 120, di = 327)
+```
+
+Note that the `escalc()` function from the *metafor* package estimates the natural logarithm of the odds ratio (`yi`) and its variance (`vi`).  
+
+**Exercise**  
+Please try to compute the natural logarithm of the odds ratio and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  
+
+```{r, echo=FALSE, eval=TRUE}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+
+```{r, escalc-or-exercise-setup}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+```{r, escalc-or-exercise, exercise=TRUE}
+escalc(measure = , ai = , bi = , ci = , di = , data = )
+```
+```{r, escalc-or-exercise-hint-1}
+escalc(measure = "OR", ...)
+```
+```{r, escalc-or-exercise-hint-2}
+escalc(measure = "OR", ai = ai, ...)
+```
+```{r, escalc-or-exercise-hint-3}
+escalc(measure = "OR", ai = ai, bi = bi, ...)
+```
+```{r, escalc-or-exercise-hint-4}
+escalc(measure = "OR", ai = ai, bi = bi, ci = ci, ...)
+```
+```{r, escalc-or-exercise-hint-5}
+escalc(measure = "OR", ai = ai, bi = bi, ci = ci, di = di, ...)
+```
+```{r, escalc-or-exercise-solution}
+escalc(measure = "OR", ai = ai, bi = bi, ci = ci, di = di, data = DF)
+```
+
+###
+#### **Peto Odds Ratio**
+**Exercise**
+```{r, escalc-peto-exercise, exercise=TRUE}
+escalc(measure = , ai = , bi = , ci = , di = , data = )
+```
+```{r, escalc-peto-exercise-hint-1}
+escalc(measure = "PETO", ...)
+```
+```{r, escalc-peto-exercise-hint-2}
+escalc(measure = "PETO", ai = , ...)
+```
+```{r, escalc-peto-exercise-hint-3}
+escalc(measure = "PETO", ai = , bi = , ...)
+```
+```{r, escalc-peto-exercise-hint-4}
+escalc(measure = "PETO", ai = , bi = , ci = , ...)
+```
+```{r, escalc-peto-exercise-hint-5}
+escalc(measure = "PETO", ai = , bi = , ci = , di = , ...)
+```
+```{r, escalc-peto-exercise-solution}
+escalc(measure = "PETO", ai = , bi = , ci = , di = , data = DF)
+```
+
+###
+#### **Risk Difference**
+For study $i$, the estimated risk difference is
+$$\widehat{RD}_{i}=\frac{a_{i}}{a_{i}+b_{i}}-\frac{c_{i}}{c_{i}+d_{i}}$$
+where $a_{i}$ is the observed count in the upper left cell of the 2x2 table of study $i$ (`ai`), $b_{i}$ is the observed count in the upper right cell of the 2x2 table of study $i$ (`bi`), $c_{i}$ is the observed count in the lower left cell of the 2x2 table of study $i$ (`ci`), and $d_{i}$ is the observed count in the lower right cell of the 2x2 table of study $i$ (`di`).  
+
+The standard error of the estimated risk difference is approximated by
+$$S.E.(\widehat{RD}_{i})=\sqrt{\widehat{Var}(\widehat{RD}_{i})}=\sqrt{\frac{a_{i}b_{i}}{(a_{i}+b_{i})^3}+\frac{c_{i}d_{i}}{(c_{i}+d_{i})^3}}.$$
+**Example**  
+```{r, escalc-rd-example, echo=TRUE, eval=TRUE}
+escalc(measure = "RD", ai = 110, bi = 310, ci = 120, di = 327)
+```
+
+Note that the `escalc()` function from the *metafor* package estimates the risk difference (`yi`) and its variance (`vi`).  
+
+**Exercise**  
+Please try to compute the risk difference and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  
+
+```{r, echo=FALSE, eval=TRUE}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+
+```{r, escalc-rd-exercise-setup}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+```{r, escalc-rd-exercise, exercise=TRUE}
+escalc(measure = , ai = , bi = , ci = , di = , data = )
+```
+```{r, escalc-rd-exercise-hint-1}
+escalc(measure = "RD", ...)
+```
+```{r, escalc-rd-exercise-hint-2}
+escalc(measure = "RD", ai = , ...)
+```
+```{r, escalc-rd-exercise-hint-3}
+escalc(measure = "RD", ai = , bi = , ...)
+```
+```{r, escalc-rd-exercise-hint-4}
+escalc(measure = "RD", ai = , bi = , ci = , ...)
+```
+```{r, escalc-rd-exercise-hint-5}
+escalc(measure = "RD", ai = , bi = , ci = , di = , ...)
+```
+```{r, escalc-rd-exercise-solution}
+escalc(measure = "RD", ai = , bi = , ci = , di = , data = DF)
+```
+
+###
+#### **Risk Ratio**
+For study $i$, the estimated risk ratio is
+$$\widehat{RR}_{i}=\frac{\Big(\frac{a_{i}}{a_{i}+b_{i}}\Big)}{\Big(\frac{c_{i}}{c_{i}+d_{i}}\Big)}$$
+where $a_{i}$ is the observed count in the upper left cell of the 2x2 table of study $i$ (`ai`), $b_{i}$ is the observed count in the upper right cell of the 2x2 table of study $i$ (`bi`), $c_{i}$ is the observed count in the lower left cell of the 2x2 table of study $i$ (`ci`), and $d_{i}$ is the observed count in the lower right cell of the 2x2 table of study $i$ (`di`).  
+
+The standard error of the natural logarithm of the risk ratio is approximated by
+$$S.E.(\log(\widehat{RR}_{i}))=\sqrt{\widehat{Var}(\log(\widehat{RR}_{i}))}=\sqrt{\frac{1}{a_{i}}+\frac{1}{c_{i}}-\frac{1}{a_{i}+b_{i}}-\frac{1}{c_{i}+d_{i}}}.$$
+**Example**  
+```{r, escalc-rr-example, echo=TRUE, eval=TRUE}
+escalc(measure = "RR", ai = 110, bi = 310, ci = 120, di = 327)
+```
+
+Note that the `escalc()` function from the *metafor* package estimates the natural logarithm of the risk ratio (`yi`) and its variance (`vi`).  
+
+**Exercise**  
+Please try to compute the natural logarithm of the risk ratio and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  
+
+```{r, echo=FALSE, eval=TRUE}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+
+```{r, escalc-rr-exercise-setup}
+data.frame(Study = c("Study A", "Study B", "Study C", "Study D"), ai = c(9, 110, 95, 315), bi = c(102, 310, 314, 282), ci = c(11, 120, 106, 354), di = c(331, 327, 306, 268))
+```
+```{r, escalc-rr-exercise, exercise=TRUE}
+escalc(measure = , ai = , bi = , ci = , di = , data = )
+```
+```{r, escalc-rr-exercise-hint-1}
+escalc(measure = "RR", ...)
+```
+```{r, escalc-rr-exercise-hint-2}
+escalc(measure = "RR", ai = ai, ...)
+```
+```{r, escalc-rr-exercise-hint-3}
+escalc(measure = "RR", ai = ai, bi = bi, ...)
+```
+```{r, escalc-rr-exercise-hint-4}
+escalc(measure = "RR", ai = ai, bi = bi, ci = ci, ...)
+```
+```{r, escalc-rr-exercise-hint-5}
+escalc(measure = "RR", ai = ai, bi = bi, ci = ci, di = di, ...)
+```
+```{r, escalc-rr-exercise-solution}
+escalc(measure = "RR", ai = ai, bi = bi, ci = ci, di = di, data = DF)
+```
+
+###
+#### **Zero Count Problem**
+|Argument in `escalc()`||Description|
+|:--|:--|:--|
+|`to="only0"` | |Add 0.5 to each cell of 2x2 tables with a zero count problem|
+|`to="if0all"` | |Add 0.5 to each cell of all 2x2 tables (zero count problem)|
+|`to="all"` | |Add 0.5 to each cell of all 2x2 tables (no zero count problem)|
+
+### **3.2 Continuous Measures**
+#### **Mean Difference**
+
+For study $i$, the estimated mean difference is  
+$$\hat{\mu}_{i} = \hat{\mu}_{1i}-\hat{\mu}_{2i}$$
+where $\hat{\mu}_{1i}$ is the mean in group 1 of study $i$ (`m1i`) and $\hat{\mu}_{2i}$ is the mean in group 2 of study $i$ (`m2i`). The standard error of the estimated mean difference for study $i$ is approximated by  
+$$S.E.(\hat{\mu}_{i})=\sqrt{\widehat{Var}(\hat{\mu}_{i})}=\sqrt{\frac{s_{1i}^{2}}{n_{1i}}+\frac{s_{2i}^{2}}{n_{2i}}}$$
+where $s_{1i}^{2}$ is the standard deviation in group 1 of study $i$ (`sd1i`), $s_{2i}^{2}$ is the standard deviation in group 2 of study $i$ (`sd2i`), $n_{1i}$ is the number of observations in group 1 of study $i$ (`n1i`), and $n_{2}$ is the number of observations in group 2 of study $i$ (`n2i`).  
+
+**Example**
+```{r, echo=TRUE, eval=TRUE}
+escalc(measure = "MD", m1i = 55, m2i = 75, sd1i = 47, sd2i = 64, n1i = 155, n2i = 156)
+```
+
+Note that the `escalc()` function from the *metafor* package estimates the mean difference (`yi`) and its variance (`vi`). 
+
+**Exercise**  
+Please try to compute the mean difference and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  
+
+```{r, echo=FALSE, eval=TRUE}
+data.frame(Study = c("Edinburgh", "Newcastle", "Umea", "Uppsala"), n1i = c(155, 34, 110, 60), m1i = c(55, 52, 21, 30), sd1i = c(47, 45, 16, 27), n2i = c(156, 33, 183, 52), m2i = c(75, 41, 31, 23), sd2i = c(64, 34, 27, 20))
+```
+
+```{r, escalc-md-exercise-setup}
+DF <- data.frame(Study = c("Edinburgh", "Newcastle", "Umea", "Uppsala"), n1i = c(155, 34, 110, 60), m1i = c(55, 52, 21, 30), sd1i = c(47, 45, 16, 27), n2i = c(156, 33, 183, 52), m2i = c(75, 41, 31, 23), sd2i = c(64, 34, 27, 20))
+```
+```{r, escalc-md-exercise, exercise=TRUE}
+escalc(measure = , m1i = , m2i = , sd1i = , sd2i = , n1i = , n2i = , data = )
+```
+```{r, escalc-md-exercise-hint-1}
+escalc(measure = "MD", ...)
+```
+```{r, escalc-md-exercise-hint-2}
+escalc(measure = "MD", m1i = m1i, ...)
+```
+```{r, escalc-md-exercise-hint-3}
+escalc(measure = "MD", m1i = m1i, m2i = m2i, ...)
+```
+```{r, escalc-md-exercise-hint-4}
+escalc(measure = "MD", m1i = m1i, m2i = m2i, sd1i = sd1i, ...)
+```
+```{r, escalc-md-exercise-hint-5}
+escalc(measure = "MD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, ...)
+```
+```{r, escalc-md-exercise-hint-6}
+escalc(measure = "MD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1i, ...)
+```
+```{r, escalc-md-exercise-hint-7}
+escalc(measure = "MD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1i, n2i = n2i, ...)
+```
+```{r, escalc-md-exercise-solution}
+escalc(measure = "MD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1i, n2i = n2i, data = DF)
+```
+
+###
+```{r, escalc-md-exercise-quiz}
+quiz(
+  question("Which study showed the largest absolute mean difference?",
+    answer("Edinburgh", correct = TRUE),
+    answer("Newcastle", correct = FALSE),
+    answer("Umea", correct = FALSE),
+    answer("Uppsala", correct = FALSE),
+    answer("There is not enough information available to answer the question.", correct = FALSE),
+    random_answer_order = TRUE,
+    allow_retry = TRUE
+  ),
+  question("The standard error for the estimated mean difference is given by",
+    answer("$\\sqrt{vi}$", correct = TRUE),
+    answer("yi", correct = FALSE),
+    answer("vi", correct = FALSE),
+    answer("$\\frac{yi}{\\sqrt{vi}}$", correct = FALSE),
+    answer("$\\sqrt{yi}$", correct = FALSE),
+    random_answer_order = TRUE,
+    allow_retry = TRUE
+  )
+)
+```
+
+###
+#### **Standardized Mean Difference**
+For study $i$, the estimated standardized mean difference according to Hedges (also called Hedges's $g$) is
+$$\hat{g}_{i}=\bigg(1-\frac{3}{4n_{i}-9}\bigg)\frac{\hat{\mu}_{1i}-\hat{\mu}_{2i}}{\sqrt{\big((n_{1i}-1)s_{1i}^{2}+(n_{2i}-1)s_{2i}^{2}\big)\big/\big(n_{i}-2\big)}}$$
+where $n_{i}$ is the total number of observations in study $i$, $\hat{\mu}_{1i}$ is the mean in group 1 of study $i$  (`m1i`), $\hat{\mu}_{2i}$ is the mean in group 2 of study $i$ (`m2i`), $s_{1i}^{2}$ is the standard deviation in group 1 of study $i$ (`sd1i`), $s_{2i}^{2}$ is the standard deviation in group 2 of study $i$ (`sd2i`), $n_{1i}$ is the number of observations in group 1 of study $i$ (`n1i`), and $n_{2i}$ is the number of observations in group 2 of study $i$ (`n2i`). The standard error of the estimated standardized mean difference for study $i$ is approximated by  
+
+$$S.E.(\hat{g}_{i})=\sqrt{\widehat{Var}(\hat{g}_{i})}=\sqrt{\frac{n_{i}}{n_{1i}n_{2i}}+\frac{\hat{g}_{i}^{2}}{2(n_{i}-3.94)}}$$
+where $\hat{g}_i$ is the estimated standardized mean difference for study $i$, $n_{i}$ is the total number of observations in study $i$, $n_{1i}$ is the number of observations in group 1 of study $i$, and $n_{2i}$ is the number of observations in group 2 of study $i$.  
+
+**Example**  
+```{r, echo=TRUE, eval=TRUE}
+escalc(measure = "SMD", m1i = 55, m2i = 75, sd1i = 47, sd2i = 64, n1i = 155, n2i = 156)
+```
+
+Note that the `escalc()` function from the *metafor* package estimates the standardized mean difference (`yi`) and its variance (`vi`).  
+
+**Exercise**  
+Please try to compute the standardized mean difference and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  
+
+```{r, echo=FALSE, eval=TRUE}
+data.frame(Study = c("Edinburgh", "Newcastle", "Umea", "Uppsala"), n1i = c(155, 34, 110, 60), m1i = c(55, 52, 21, 30), sd1i = c(47, 45, 16, 27), n2i = c(156, 33, 183, 52), m2i = c(75, 41, 31, 23), sd2i = c(64, 34, 27, 20))
+```
+
+```{r, escalc-smd-exercise-setup}
+DF <- data.frame(Study = c("Edinburgh", "Newcastle", "Umea", "Uppsala"), n1i = c(155, 34, 110, 60), m1i = c(55, 52, 21, 30), sd1i = c(47, 45, 16, 27), n2i = c(156, 33, 183, 52), m2i = c(75, 41, 31, 23), sd2i = c(64, 34, 27, 20))
+```
+```{r, escalc-smd-exercise, exercise=TRUE}
+escalc(measure = , m1i = , m2i = , sd1i = , sd2i = , n1i = , n2i = , data = )
+```
+```{r, escalc-smd-exercise-hint-1}
+escalc(measure = "SMD", ...)
+```
+```{r, escalc-smd-exercise-hint-2}
+escalc(measure = "SMD", m1i = m1i, ...)
+```
+```{r, escalc-smd-exercise-hint-3}
+escalc(measure = "SMD", m1i = m1i, m2i = m2i, ...)
+```
+```{r, escalc-smd-exercise-hint-4}
+escalc(measure = "SMD", m1i = m1i, m2i = m2i, sd1i = sd1i, ...)
+```
+```{r, escalc-smd-exercise-hint-5}
+escalc(measure = "SMD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, ...)
+```
+```{r, escalc-smd-exercise-hint-6}
+escalc(measure = "SMD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1i, ...)
+```
+```{r, escalc-smd-exercise-hint-7}
+escalc(measure = "SMD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1i, n2i = n2i, ...)
+```
+```{r, escalc-smd-exercise-solution}
+escalc(measure = "SMD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1i, n2i = n2i, data = DF)
+```
+
+###
+#### **3.8 Incidence Rate Ratio**
+
+###
+#### **3.9 Incidence Rate Difference**
+
+###
+#### **3.10 Square Root Transformed Incidence Rate Difference**
+
+
+### **References**
+Bland JM & Altman DG (2000). Statistics Notes: The odds ratio. *BMJ*, 320: 1468.  
+
+Viechtbauer W (2010). Conducting meta-analyses in R with the metafor package. *J Stat Softw*, 36: 1-48.
