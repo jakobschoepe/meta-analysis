@@ -15,15 +15,21 @@
 
 **Recommendation**  
 
+**Example**
+```{r, echo = FALSE, eval = TRUE}
+DF <- escalc(measure = "OR", ai = ai, bi = bi, ci = ci, di = di, data = DF)
+```
+```{r, rma-re-example, echo = TRUE, eval = TRUE}
+rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML")
+```
 
-###
-#### **Hartung-Knapp Adjustment**
 
+**Exercise**
 ```{r, rma-re-exercise-setup}
 
 ```
 ```{r, rma-re-exercise, exercise = TRUE}
-fit <- rma(yi = , sei = , measure = , data = , slab = , method = , test = )
+fit <- rma(yi = , vi = , measure = , data = , slab = , method = , test = )
 ```
 ```{r, rma-re-exercise-hint-1}
 fit <- rma(yi = yi, ...)
@@ -40,11 +46,8 @@ fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, ...)
 ```{r, rma-re-exercise-hint-5}
 fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, ...)
 ```
-```{r, rma-re-exercise-hint-6}
-fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", ...)
-```
 ```{r, rma-re-exercise-solution}
-fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", test = "knha")
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML")
 ```
 
 ```{r, rma-re-exercise-summary-setup}
@@ -72,6 +75,13 @@ forest(x = fit, showweights = TRUE, ...)
 ```{r, rma-re-exercise-forest-plot-solution}
 forest(x = fit, showweights = TRUE, atransf = exp)
 ```
+
+###
+#### **Hartung-Knapp Adjustment**
+```{r, rma-re-knha-example, echo = TRUE, eval = TRUE}
+rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", test = "knha")
+```
+
 
 ### **References**  
 DerSimonian R & Laird N (1986). Meta-analysis in clinical trials. *Controlled Clinical Trials*, 7: 177-188.  

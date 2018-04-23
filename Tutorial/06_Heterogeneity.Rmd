@@ -1,18 +1,90 @@
 ## **6. Heterogeneity**
-In meta-analysis, statistical heterogeneity is defined as the variation among the effect estimates of individual studies beyond that expected from chance alone. 
+In meta-analysis, statistical heterogeneity is defined as the variation among the effect estimates of individual studies beyond that expected from chance alone. Empirical evidence suggests that statistical heterogeneity is likely to be present in meta-analysis (Turner et al., 2012). 
 
 ###
 #### **Measures of Heterogeneity**
 Cochran's Q (Cochran, 1954) is
-$$Q=\displaystyle\sum_{k=1}^{i}w_{k}(\hat{\theta}_{k}-\frac{\displaystyle\sum_{k=1}^{i}w_{k}\hat{\theta}_{k}}{\displaystyle\sum_{k=1}^{i}w_{k}})^{2}$$
+$$Q=\displaystyle\sum_{k=1}^{i}w_{k}\Bigg(\hat{\theta}_{k}-\frac{\displaystyle\sum_{k=1}^{i}w_{k}\hat{\theta}_{k}}{\displaystyle\sum_{k=1}^{i}w_{k}}\Bigg)^{2}$$
 
 Higgins' and Thompson's $I^2$ (Higgins & Thompson, 2002) is
 $$I^2=\max\Bigg\{0,\frac{Q-(i-1)}{Q}\Bigg\}$$
 
+
+
 ### **6.1 Subgroup Analysis**
+**Example**
+```{r, rma-re-subset-example, echo = TRUE, eval = FALSE}
+rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, subset = x1i == 0, method = "REML")
+```
+
+**Exercise**  
+Please try to fit a random-effects model for the following studies which fulfill the condition `x1i == 0` using the `rma()` function from the *metafor* package.
+
+```{r, rma-re-subset-exercise-setup}
+DF <- dat.ishak2007
+```
+```{r, rma-re-subset-exercise, exercise = TRUE}
+fit <- rma(yi = , vi = , measure = , data = , slab = , subset = , method = )
+```
+```{r, rma-re-subset-exercise-hint-1}
+fit <- rma(yi = yi, ...)
+```
+```{r, rma-re-subset-exercise-hint-2}
+fit <- rma(yi = yi, vi = vi, ...)
+```
+```{r, rma-re-subset-exercise-hint-3}
+fit <- rma(yi = yi, vi = vi, measure = "OR", ...)
+```
+```{r, rma-re-subset-exercise-hint-4}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, ...)
+```
+```{r, rma-re-subset-exercise-hint-5}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, ...)
+```
+```{r, rma-re-subset-exercise-hint-6}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, subset = x1i == 0, ...)
+```
+```{r, rma-re-subset-exercise-solution}
+fit <- rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, subset = x1i == 0, method = "REML")
+```
+
 
 ### **6.2 Meta Regression**
+**Example**
+```{r, rma-re-mods-example, echo = TRUE, eval = FALSE}
+rma(yi = yi, vi = vi, mods = ~ x1i, measure = "OR", data = DF, slab = Study, method = "REML")
+```
 
+**Exercise**  
+Please try to fit a random-effects model with moderators `x1i` and `x2i` for the following studies using the `rma()` function from the *metafor* package.
+
+```{r, rma-re-mods-exercise-setup}
+DF <- dat.ishak2007
+```
+```{r, rma-re-mods-exercise, exercise = TRUE}
+fit <- rma(yi = , vi = , mods = , measure = , data = , slab = , method = )
+```
+```{r, rma-re-mods-exercise-hint-1}
+fit <- rma(yi = yi, ...)
+```
+```{r, rma-re-mods-exercise-hint-2}
+fit <- rma(yi = yi, vi = vi, ...)
+```
+```{r, rma-re-mods-exercise-hint-3}
+fit <- rma(yi = yi, vi = vi, mods = ~ x1i + x2i, ...)
+```
+```{r, rma-re-mods-exercise-hint-4}
+fit <- rma(yi = yi, vi = vi, mods = ~ x1i + x2i, measure = "OR", ...)
+```
+```{r, rma-re-mods-exercise-hint-5}
+fit <- rma(yi = yi, vi = vi, mods = ~ x1i + x2i, measure = "OR", data = DF, ...)
+```
+```{r, rma-re-mods-exercise-hint-6}
+fit <- rma(yi = yi, vi = vi, mods = ~ x1i + x2i, measure = "OR", data = DF, slab = Study, ...)
+```
+```{r, rma-re-mods-exercise-solution}
+fit <- rma(yi = yi, vi = vi, mods = ~ x1i + x2i, measure = "OR", data = DF, slab = Study, method = "REML")
+```
 
 ### **References**
 Berlin J. A., Santanna J., Schmid C. H., Szczech L. A. & Feldman H. I. (2002). Individual patient- versus group-level data meta-regressions for the investigation of treatment effect modifiers: Ecological bias rears its ugly head. *Stat Med*, 21: 371-387.  
@@ -36,6 +108,8 @@ Rücker G., Schwarzer G., Carpenter J. R. & Schumacher M. (2008). Undue reliance
 Thompson S. G. (1994). Why sources of heterogeneity in meta-analysis should be investigated. *BMJ*, 309: 1351-1355.  
 
 Thompson S. G. & Sharp S. J. (1999). Explaining heterogeneity in meta-analysis: A comparison of methods. *Stat Med*, 18: 2693-2708.  
+
+Turner R. M., Davey J., Clarke M. J., Thompson S. G. & Higgins J. P. T. (2012). Predicting the extent of heterogeneity in meta-analysis, using empirical data from the Cochrane Database of Systematic Reviews. *Int J Epidemiol*, 41: 818-827.   
 
 Viechtbauer W. (2007). Confidence intervals for the amount of heterogeneity in meta-analysis. *Stat Med*, 26: 37-52.  
 
