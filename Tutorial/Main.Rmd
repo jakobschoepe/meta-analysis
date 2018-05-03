@@ -10,7 +10,7 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 library(learnr)
 library(metafor)
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(comment = "", echo = FALSE)
 ```
 
 ```{r child="00_Welcome.Rmd"}

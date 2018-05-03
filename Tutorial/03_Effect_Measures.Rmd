@@ -18,7 +18,11 @@ $$S.E.(\widehat{ASD}_{i})=\sqrt{\widehat{Var}(\widehat{ASD}_{i})}=\sqrt{\frac{1}
 escalc(measure = "AS", ai = 110, bi = 310, ci = 120, di = 327)
 ```
 
-Note that the `escalc()` function from the *metafor* package estimates the arcsine difference (`yi`) and its variance (`vi`).
+Note that the `escalc()` function from the *metafor* package estimates the arcsine difference (`yi`) and its variance (`vi`). 
+
+```{r, escalc-as-example-alternative, echo=TRUE, eval=TRUE}
+escalc(measure = "AS", ai = 110, n1i = 110 + 310, ci = 120, n2i = 120 + 327)
+```
 
 **Exercise**  
 Please try to compute the arcsine difference and its variance for the following studies using the `escalc()` function from the *metafor* package. The data frame shown below is stored in an object called `DF`.  

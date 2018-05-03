@@ -11,7 +11,7 @@ While individual timing may vary, this course takes on average approximately 2 h
 <br>
 
 **Are there any prerequisites for the course?**  
-The course assumes no prior knowledge of meta-analytic methods.
+The course assumes no prior knowledge of meta-analytic techniques.
 <br>
 
 **Which software is required for the course?**  

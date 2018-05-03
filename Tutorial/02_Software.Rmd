@@ -3,11 +3,11 @@
 R is a popular open-source project which provides a free software package for statistical computing using an object oriented programming language called S. Many classical and modern statistical techniques have been implemented in R by its fast growing community since its first release in 1993. The elegance of R in giving minimal output, storing results from expressions in objects for subsequent interrogation by further R functions, and producing high-quality graphics makes it a great tool for meta-analysis.
 
 ### **2.1 Installation**
-Precompiled binary distributions of R for Linux, macOS and Windows are available on [CRAN](https://cran.r-project.org). For macOS or Windows operation systems, please download and execute the latest PKG- or EXE-file of the precompiled binary distribution from your CRAN mirror of choice. For Linux operation systems, please follow the instructions on your CRAN mirror of choice to install the latest precompiled binary distribution.
+Precompiled binary distributions of R for Linux, macOS and Windows are available on [CRAN](https://cran.r-project.org). For macOS or Windows operating systems, please download and execute the latest PKG- or EXE-file of the precompiled binary distribution. For Linux operating systems, please follow the instructions on CRAN.
 
 ### **2.2 Introduction to R**
 #### **Commands**
-R is a case sensitive expression language. Elementary commands consist of either expressions or assignments. Commands are separated either by a semicolon (`;`) or by a new line. The entities R operates on are technically known as objects.  
+R is a case sensitive expression language. Elementary commands consist of either expressions or assignments. Commands are separated either by a semicolon (`;`) or by a newline. The entities R operates on are technically known as objects.  
 
 An expression is evaluated and subsequently printed. However, in contrast to an assignment the result from an expression is lost. The following expression sums a simple sequence from 1 to 5 (1 + 2 + 3 + 4 + 5 = 15).  
 ```{r, echo=TRUE, eval=TRUE}
@@ -38,6 +38,7 @@ help(topic = )
 ```{r, help-exercise-solution}
 help(topic = read.csv2)
 ```
+
 
 ###
 ```{r, help-exercise-quiz}
@@ -96,15 +97,13 @@ library(package = "metafor")
 ```
 
 ###
-#### **Working Directory**
-The filepath of the working directory of the R process can be set using the `setwd()` function.
+#### **Data Input**
+Data can be read from the current working directory using the `read` functions family. The filepath of the working directory of the R process can be set using the `setwd()` function.  
 ```{r, setwd, echo=TRUE, eval=FALSE}
 setwd(dir = "/myUserName/myFilePath/")
 ```
 
-###
-#### **Data Input**
-Data can be read from the current working directory using the `read` functions family. The following assignment reads a file in table format (here a CSV-file) into the global R environment, creates a data structure called \"data frame\" from it and passes the data to an object called `DF`.
+The following assignment reads a file in table format (here a CSV-file) into the global R environment, creates a data structure called \"data frame\" from it and passes the data to an object called `DF`.
 ```{r, read-csv2, echo=TRUE, eval=FALSE}
 DF <- read.csv2(file = "myData.csv")
 ```

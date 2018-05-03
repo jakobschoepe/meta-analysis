@@ -1,21 +1,9 @@
 ## **1. Relationale**
 ###
-A meta-analysis plays a key role in evidence synthesis and is preceded by a systematic review of the literature. After formulation of the research question (cf. PICO) and specification of criteria for eligibility, a systematic literature search is conducted using prespecified search strategies for bibliographic databases. Search results are screened for eligibility and relevant studies are selected for subsequent synthesis. Before the evidence synthesis, relevant information such as the effect estimate is extracted from all included studies. Furthermore, the risk of bias is assessed in each individual study. Finally, effect estimates from conceptually similar studies are combined using meta-analytic techniques. Results from evidence synthesis should be reported in accordance with the PRISMA Statement (Moher et al., 2009).
+A meta-analysis plays a key role in evidence synthesis and is preceded by a systematic review of the literature. After formulation of the research question (cf. PICO) and specification of criteria for eligibility, a systematic literature search is conducted using prespecified search strategies for bibliographic databases. Search results are screened for eligibility and relevant studies are selected for subsequent synthesis. Before the evidence synthesis, relevant information such as the effect estimate is extracted from all included studies. Furthermore, the risk of bias should be assessed in each individual study. Finally, effect estimates from conceptually similar studies are combined using meta-analytic techniques. Results from evidence synthesis should be reported in accordance with the PRISMA Statement (Moher et al., 2009).
 
 ###
-#### **Short History**
-|Year||
-|:--|:--|
-|1904|Pearson conducts the first analysis of multiple clinical trials|
-|1935|Fisher gives an example of the analysis of multiple studies|
-|1937|Cochran publishes a paper on the analysis of similar experiments|
-|1954|Cochran publishes another paper on this topic|
-|1956|Fisher discusses more examples of the analysis of multiple studies|
-|1976|Glass coins the term "meta-analysis"|
-|1985|Hedges & Olkin publish one of the earliest texts on meta-analysis|
-
-###
-#### **Bibliographic Databases**
+#### **Bibliographic Databases/Search Engines**
 [CINAHL](https://ebscohost.com/nursing/products/cinahl-databases/the-cinahl-database)  
 [Cochrane Library](https://cochranelibrary.com)  
 [Embase](https://elsevier.com/solutions/embase-biomedical-research)  
@@ -24,22 +12,4 @@ A meta-analysis plays a key role in evidence synthesis and is preceded by a syst
 [Web of Science](https://webofknowledge.com)  
 
 ### **References**
-Chalmers I., Hedges L. V. & Cooper H. (2002). A brief history of research synthesis. *Evaluation & The Health Professions*, 25: 12-37.  
-
-Cochran W. G. (1937). Problems arising in the analysis of a series of similar experiments. *J Roy Stat Soc*, 4(Suppl): 102-118.  
-
-Cochran W. G. (1954). The combination of estimates from different experiments. *Biometrics*, 10: 101-129.  
-
-Fisher R. A. (1935). The design of experiments. Edinburgh: *Oliver and Boyd*.  
-
-Fisher R. A. (1956). Statistical methods and scientific inference. Edinburgh: *Oliver and Boyd*.  
-
-Glass G. V. (1976). Primary, secondary, and meta-analysis of research. *Educational Researcher*, 5: 3-8.  
-
-Hedges L. V. & Olkin I. (1985). Statistical methods for meta-analysis. San Diego: Academic Press.  
-
 Moher D., Liberati A., Tetzlaff J., Altman D. G. & The PRISMA Group (2009). Preferred reporting items for systematic reviews and meta-analyses: The PRISMA Statement. *PLoS Med*, 6: e1000097.  
-
-O'Rourke K. (2007). An historical perspective on meta-analysis: Dealing quantitatively with varying study results. *Journal of the Royal Society of Medicine*, 100: 579-582.  
-
-Pearson K. (1904). Report on certain enteric fever inoculation statistics. *British Medical Journal*, 3: 1243-1246.

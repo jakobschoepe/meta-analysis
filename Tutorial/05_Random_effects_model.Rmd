@@ -1,4 +1,6 @@
 ## **5. Random-effects Model**
+Several methods have been proposed to estimate between-study variance (and its uncertainty) in meta-analysis (Veroniki et al., 2015). However, Veroniki et al. (2015) pointed out that, particularly when the number of studies is small (<5) and when the normality assumption is violated, explicit recommendations concerning the most preferable method is difficult. Accordingly, Veroniki et al. (2015) recommend to conduct a sensitivity analysis using a variety of between-study variance estimators. The following table shows estimators which are implemented in the *metafor* package.    
+
 ###
 #### **Estimation of Between-Study Variance ($\tau^2$)**
 |Estimator||
