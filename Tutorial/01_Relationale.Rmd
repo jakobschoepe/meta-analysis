@@ -13,5 +13,7 @@ A meta-analysis plays a key role in evidence synthesis and is preceded by a syst
 
 ### **References**
 Ioannidis JPA (2009) Integration of evidence from multiple meta-analyses: A primer on umbrella reviews, treatment networks and multiple treatments meta-analyses. CMAJ 181:488-493  
+
 Ioannidis JPA, Patsopoulos NA, Rothstein HR (2008) Reasons or excuses for avoiding meta-analysis in forest plots. BMJ 336:1413-1415  
+
 Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009) Preferred reporting items for systematic reviews and meta-analyses: The PRISMA Statement. PLoS Med 6: e1000097  
