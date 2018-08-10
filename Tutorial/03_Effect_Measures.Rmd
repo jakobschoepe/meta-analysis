@@ -374,6 +374,10 @@ escalc(measure = "SMD", m1i = m1i, m2i = m2i, sd1i = sd1i, sd2i = sd2i, n1i = n1
 
 
 ### **References**
-Bland JM & Altman DG (2000). Statistics Notes: The odds ratio. *BMJ*, 320: 1468.  
+Bland JM, Altman DG (2000) Statistics Notes: The odds ratio. *BMJ* 320:1468  
+
+Liu T, Nie X, Wu Z, Zhang Y, Feng G, Cai S, Lv y, Peng X (2017) Can statistic adjustment of OR minimize the potential confounding bias for meta-analysis of case-control study? A secondary data analysis. *BMC Med Res Methodol* 17:179  
+
+Thompson S, Ekelund U, Jebb S, Lindroos AK, Mander A, Sharp S, Turner R, Wilk D (2011) A proposed method of bias adjustment for meta-analyses of published observational studies. *Int J Epidemiol* 40:765-777  
 
 Viechtbauer W (2010). Conducting meta-analyses in R with the metafor package. *J Stat Softw*, 36: 1-48.
