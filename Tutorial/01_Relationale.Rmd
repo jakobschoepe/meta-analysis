@@ -12,18 +12,18 @@ A meta-analysis plays a key role in evidence synthesis and is preceded by a syst
 [Web of Science](https://webofknowledge.com)  
 
 ### **References**
-Bailar JC III (1997) The promise and problems of meta-analysis. N Engl J Med 337:559-561  
+Bailar JC III (1997) The promise and problems of meta-analysis. *N Engl J Med* 337:559-561  
 
-Feinstein AR (1995) Meta-analysis: Statistical alchemy for the 21st century. J Clin Epidemiol 48:71-79  
+Feinstein AR (1995) Meta-analysis: Statistical alchemy for the 21st century. *J Clin Epidemiol* 48:71-79  
 
-Ioannidis JPA (2009) Integration of evidence from multiple meta-analyses: A primer on umbrella reviews, treatment networks and multiple treatments meta-analyses. CMAJ 181:488-493  
+Ioannidis JPA (2009) Integration of evidence from multiple meta-analyses: A primer on umbrella reviews, treatment networks and multiple treatments meta-analyses. *CMAJ* 181:488-493  
 
-Ioannidis JPA, Patsopoulos NA, Rothstein HR (2008) Reasons or excuses for avoiding meta-analysis in forest plots. BMJ 336:1413-1415  
+Ioannidis JPA, Patsopoulos NA, Rothstein HR (2008) Reasons or excuses for avoiding meta-analysis in forest plots. *BMJ* 336:1413-1415  
   
-Macleod MR, Michie S, Roberts I, Dirnagl U, Chalmers I, Ioannidis JPA, Al-Shahi Salman R, Chan A-W, Glasziou P (2014) Biomedical research: Increasing value, reducing waste. Lancet 383:101-104  
+Macleod MR, Michie S, Roberts I, Dirnagl U, Chalmers I, Ioannidis JPA, Al-Shahi Salman R, Chan A-W, Glasziou P (2014) Biomedical research: Increasing value, reducing waste. *Lancet* 383:101-104  
 
-Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009) Preferred reporting items for systematic reviews and meta-analyses: The PRISMA Statement. PLoS Med 6: e1000097  
+Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009) Preferred reporting items for systematic reviews and meta-analyses: The PRISMA Statement. *PLoS Med* 6: e1000097  
 
-Shapiro S (1997) Is meta-analysis a valid approach to the evaluation of small effects in observational studies? J Clin Epidemiol 50:223-229  
+Shapiro S (1997) Is meta-analysis a valid approach to the evaluation of small effects in observational studies? *J Clin Epidemiol* 50:223-229  
 
-Thompson SG, Pocock SJ (1991) Can meta-analyses be trusted? Lancet 338:1127-1130
+Thompson SG, Pocock SJ (1991) Can meta-analyses be trusted? *Lancet* 338:1127-1130
