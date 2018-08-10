@@ -87,30 +87,30 @@ fit <- rma(yi = yi, vi = vi, mods = ~ x1i + x2i, measure = "OR", data = DF, slab
 ```
 
 ### **References**
-Berlin J. A., Santanna J., Schmid C. H., Szczech L. A. & Feldman H. I. (2002). Individual patient- versus group-level data meta-regressions for the investigation of treatment effect modifiers: Ecological bias rears its ugly head. *Stat Med*, 21: 371-387.  
+Berlin JA, Santanna J, Schmid CH, Szczech LA, Feldman HI (2002) Individual patient- versus group-level data meta-regressions for the investigation of treatment effect modifiers: Ecological bias rears its ugly head. *Stat Med* 21:371-387  
 
-Cochran W. G. (1954). The combination of estimates from different experiments. *Biometrics*, 10: 101-129.
+Cochran WG (1954) The combination of estimates from different experiments. *Biometrics* 10:101-129
 
-Engels E. A., Schmid C. H., Terrin N., Olkin I. & Lau J. (2000). Heterogeneity and statistical significance in meta-analysis: An empirical study of 125 meta-analyses. *Stat Med*, 19: 1707-1728.  
+Engels EA, Schmid CH, Terrin N, Olkin I, Lau J (2000) Heterogeneity and statistical significance in meta-analysis: An empirical study of 125 meta-analyses. *Stat Med* 19:1707-1728  
 
-Hardy R. J. & Thompson S. G. (1998). Detecting and describing heterogeneity in meta-analysis. *Stat Med*, 17: 841-856.  
+Hardy RJ, Thompson SG (1998) Detecting and describing heterogeneity in meta-analysis. *Stat Med* 17:841-856  
 
-Higgins J. P. T. & Thompson S. G. (2002). Quantifying heterogeneity in a meta-analysis. *Stat Med*, 21: 1539-1558.  
+Higgins JPT, Thompson SG (2002) Quantifying heterogeneity in a meta-analysis. *Stat Med* 21:1539-1558  
 
-Knapp G., Biggerstaff B. J. & Hartung J. (2006). Assessing the amount of heterogeneity in random-effects meta-analysis. *Biom J*, 48: 271-285.  
+Knapp G, Biggerstaff BJ, Hartung J (2006) Assessing the amount of heterogeneity in random-effects meta-analysis. *Biom J* 48:271-285
 
-Lau J., Ioannidis J. P. A. & Schmid C. H. (1998). Summing up evidence: One answer is not always enough. *Lancet*, 351: 123-127.  
+Lau J, Ioannidis JPA, Schmid CH (1998) Summing up evidence: One answer is not always enough. *Lancet* 351:123-127  
 
-Mittlböck M. & Heinzl H. (2006). A simulation study comparing properties of heterogeneity measures in meta-analyses. *Stat Med*, 25: 4321-4333.  
+Mittlböck M, Heinzl H (2006) A simulation study comparing properties of heterogeneity measures in meta-analyses. *Stat Med* 25:4321-4333  
 
-Rücker G., Schwarzer G., Carpenter J. R. & Schumacher M. (2008). Undue reliance on $I^2$ in assessing heterogeneity may mislead. *BMC Med Res Methodol*, 8: 79.  
+Rücker G, Schwarzer G, Carpenter J R, Schumacher M (2008) Undue reliance on $I^2$ in assessing heterogeneity may mislead. *BMC Med Res Methodol* 8:79  
 
-Thompson S. G. (1994). Why sources of heterogeneity in meta-analysis should be investigated. *BMJ*, 309: 1351-1355.  
+Thompson SG (1994) Why sources of heterogeneity in meta-analysis should be investigated. *BMJ* 309:1351-1355  
 
-Thompson S. G. & Sharp S. J. (1999). Explaining heterogeneity in meta-analysis: A comparison of methods. *Stat Med*, 18: 2693-2708.  
+Thompson SG, Sharp SJ (1999) Explaining heterogeneity in meta-analysis: A comparison of methods. *Stat Med* 18:2693-2708  
 
-Turner R. M., Davey J., Clarke M. J., Thompson S. G. & Higgins J. P. T. (2012). Predicting the extent of heterogeneity in meta-analysis, using empirical data from the Cochrane Database of Systematic Reviews. *Int J Epidemiol*, 41: 818-827.   
+Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JPT (2012). Predicting the extent of heterogeneity in meta-analysis, using empirical data from the Cochrane Database of Systematic Reviews. *Int J Epidemiol* 41:818-827   
 
-Viechtbauer W. (2007). Confidence intervals for the amount of heterogeneity in meta-analysis. *Stat Med*, 26: 37-52.  
+Viechtbauer W (2007) Confidence intervals for the amount of heterogeneity in meta-analysis. *Stat Med* 26:37-52  
 
-Viechtbauer W. (2010). Conducting meta-analyses in R with the metafor package. *J Stat Softw*, 36: 1-48.
+Viechtbauer W (2010) Conducting meta-analyses in R with the metafor package. *J Stat Softw* 36:1-48.
