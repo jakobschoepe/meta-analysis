@@ -86,16 +86,18 @@ rma(yi = yi, vi = vi, measure = "OR", data = DF, slab = Study, method = "REML", 
 
 
 ### **References**  
-DerSimonian R & Laird N (1986). Meta-analysis in clinical trials. *Controlled Clinical Trials*, 7: 177-188.  
+DerSimonian R, Laird N (1986) Meta-analysis in clinical trials. *Control Clin Trials* 7:177-188  
 
-Hardy RJ & Thompson SG (1996). A likelihood approach to meta-analysis with random effects. *Stat Med*, 15: 619-629.  
+Hardy RJ, Thompson SG (1996) A likelihood approach to meta-analysis with random effects. *Stat Med* 15:619-629  
 
-Hartung J & Knapp G (2001). On tests of the overall treatment effect in meta-analysis with normally distributed responses. *Stat Med*, 20: 1771-1782.  
+Hartung J, Knapp G (2001) On tests of the overall treatment effect in meta-analysis with normally distributed responses. *Stat Med* 20:1771-1782  
 
-Hartung J & Knapp G (2001). A refined method for the meta-analysis of controlled clinical trials with binary outcome. *Stat Med*, 20: 3875-3889.  
+Hartung J, Knapp G (2001) A refined method for the meta-analysis of controlled clinical trials with binary outcome. *Stat Med* 20:3875-3889  
 
-Hunter JE & Schmidt FL (2004). Methods of meta-analysis: Correcting error and bias in research findings. Thousand Oaks, Calif.  
+Hunter JE, Schmidt FL (2004) Methods of meta-analysis: Correcting error and bias in research findings. ???  
 
-Paule RC & Mandel J (1982). Consensus values and weighting factors.   
+Paule RC, Mandel J (1982) Consensus values and weighting factors. ???  
 
-Veroniki AA, Jackson D, Viechtbauer W, Bender R, Bowden J, Knapp G, Kuss O, Higgins JPT, Langan D & Salanti G (2016). Methods to estimate the between-study variance and its uncertainty in meta-analysis. *Res Synth Methods*, 7: 55-79. 
+Riley RD, Higgins JP, Deeks JJ (2011) Interpretation of random effects meta-analyses. *BMJ* 342:d549  
+
+Veroniki AA, Jackson D, Viechtbauer W, Bender R, Bowden J, Knapp G, Kuss O, Higgins JPT, Langan D, Salanti G (2016) Methods to estimate the between-study variance and its uncertainty in meta-analysis. *Res Synth Methods* 7:55-79 
