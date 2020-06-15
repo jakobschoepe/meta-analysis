@@ -1,4 +1,4 @@
-## **1. Relationale**
+## **1. Rationale**
 ###
 A meta-analysis plays a key role in evidence synthesis and is preceded by a systematic review of the literature. After formulation of the research question (cf. PICO) and specification of criteria for eligibility, a systematic literature search is conducted using prespecified search strategies for bibliographic databases. Search results are screened for eligibility and relevant studies are selected for subsequent synthesis. Before the evidence synthesis, relevant information such as the effect estimate is extracted from all included studies. Furthermore, the risk of bias should be assessed in each individual study. Finally, effect estimates from conceptually similar studies are combined using meta-analytic techniques. Results from evidence synthesis should be reported in accordance with the PRISMA Statement (Moher et al., 2009).
 
