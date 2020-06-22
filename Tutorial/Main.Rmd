@@ -19,7 +19,7 @@ knitr::opts_chunk$set(comment = "", echo = FALSE)
 ```{r child="00_Quick_Tour.Rmd"}
 
 ```
-```{r child="01_Relationale.Rmd"}
+```{r child="01_Rationale.Rmd"}
 
 ```
 ```{r child="02_Software.Rmd"}
