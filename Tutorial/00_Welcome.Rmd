@@ -18,7 +18,7 @@ The course assumes no prior knowledge of meta-analytic techniques.
 R (https://www.r-project.org) and R Studio (https://www.rstudio.com)
 
 #### **Content**
-1. Relationale  
+1. Rationale  
 
 2. Software  
   2.1 Installation  
